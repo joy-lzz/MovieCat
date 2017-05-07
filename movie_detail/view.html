@@ -1,0 +1,18 @@
+<div class="movie-detail">
+    <h1 ng-if="showContent">Loading...</h1>
+    <div class="media">
+        <div class="media-left media-middle">
+            <img class="media-object" ng-src="{{movie.images.large}}" alt="{{movie.title}}">
+        </div>
+        <div class="media-body" ng-show="!showContent">
+            <h1 class="media-heading">{{movie.title}}</h1>
+            <p><strong>类型：</strong>{{movie.genres.join('、')}} &nbsp;&nbsp;<span>上映年份：{{movie.year}}</span></p>
+            <p><strong>性质：</strong>{{movie.subtype}}</p>
+            <p><strong>国家：</strong>{{movie.countries.join('、')}}</p>
+            <p><strong>导演：</strong><span ng-repeat="dire in movie.directors">{{dire.name}} <span ng-if="!$last">、</span></span></p>
+            <p><strong>主演：</strong><span ng-repeat="cast in movie.casts">{{cast.name}} <span ng-if="!$last">、</span></span></p>
+            <p> <strong>影片简介：</strong> {{movie.summary}}</p>
+        </div>
+    </div>
+    <css-loading></css-loading>
+</div>

@@ -1,0 +1,23 @@
+<div class="movie-list">
+    <h2>{{title}}</h2>
+    <a ng-repeat="item in subjects track by $index" href="#/detail/{{item.id}}"  class="list-group-item">
+        <span class="badge">{{item.rating.average}}</span>
+        <div class="media-left media-middle">
+            <img class="media-object" ng-src="{{item.images.medium}}" alt="{{item.title}}">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading"><strong>{{item.title}}</strong></h4>
+            <p>类型：{{item.genres.join('、')}} &nbsp;&nbsp;<span>上映年份：{{item.year}}</span></p>
+            <p>导演：<span ng-repeat="dire in item.directors">{{dire.name}} <span ng-if="!$last">、</span></span></p>
+            <p>主演：<span ng-repeat="cast in item.casts">{{cast.name}} <span ng-if="!$last">、</span></span></p>
+        </div>
+    </a>
+    <div  ng-if="!showContent">
+        <p class="tip">共：{{total}}条记录，{{page}}/{{totalPage}}页</p>
+        <!-- 分页指令 -->
+        <cut-page></cut-page>
+    </div>
+</div>
+
+<!-- CSS3 动画加载指令 -->
+<css-loading></css-loading>

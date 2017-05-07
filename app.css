@@ -1,0 +1,89 @@
+.page-header {
+    text-align: center;
+}
+
+.navbar .collapse {
+    position: absolute;
+    left: 35%;
+}
+
+.movie-list,
+.movie-detail {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left: -600px;
+}
+.movie-list .media-heading {
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.movie-detail .media-heading {
+    float: right;
+    width: 890px;
+    text-align: center;
+    margin: 10px 0;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+.movie-list .tip {
+    margin-top: 10px;
+}
+
+
+
+/* css3加载动画 */
+.loading {
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.loading span {
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background: lightgreen;
+    -webkit-animation: load 1s ease infinite;
+}
+
+@-webkit-keyframes load {
+    0%, 100% {
+        height: 40px;
+        background: lightgreen;
+    }
+    50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+    }
+}
+
+.loading span:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+    -webkit-animation-delay: 0.8s;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 10000;
+}
