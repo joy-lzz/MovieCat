@@ -16,7 +16,7 @@
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                 .when('/:category/:page', {
-                    templateUrl: '/app/movie_list/view.html',
+                    templateUrl: './movie_list/view.html',
                     controller: 'movieListController'
                 })
 

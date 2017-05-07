@@ -15,7 +15,7 @@
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                 .when('/detail/:id', {
-                    templateUrl: '/app/movie_detail/view.html',
+                    templateUrl: './movie_detail/view.html',
                     controller: 'movieDetailController'
                 })
 
