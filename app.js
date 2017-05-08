@@ -19,7 +19,8 @@
         .constant('appConfig', {
             pageSize : 10,
             'listApiAddress' : 'http://api.douban.com/v2/movie/',
-            detailApiAddress : 'http://api.douban.com/v2/movie/subject/'
+            detailApiAddress : 'http://api.douban.com/v2/movie/subject/',
+            showPage : 7
         })
 
 

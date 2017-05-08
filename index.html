@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- 解决https不能请求http下的文件问题 -->
+    <!-- 解决https协议下，不能请求http协议下的文件问题！！ -->
+    <!-- 在本地服务器时，要将下面的meta移除 -- 不然会访问https，而找不到相关文件 -->
+<!--
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+-->
     <title>MovieCat</title>
     <!-- 引入样式包 -->
     <link rel="stylesheet" href="app.css"/>
@@ -19,9 +22,10 @@
                 './movie_list/listModule.js',
                 './components/httpJsonp.js',
                 './components/cssLoading.js',
-                './components/cutPage.js',
+                /*'./components/cutPage.js',*/
                 './components/searchModule.js',
                 './components/autoFocus.js',
+                './components/pagination.js',
                 './movie_detail/detailModule.js'
 
         ], function () {

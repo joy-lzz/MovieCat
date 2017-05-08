@@ -1,6 +1,9 @@
 .page-header {
     text-align: center;
 }
+nav[aria-label] {
+    text-align: center;
+}
 
 .navbar .collapse {
     position: absolute;
