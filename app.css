@@ -6,24 +6,28 @@ nav[aria-label] {
 }
 
 .navbar .collapse {
-    position: absolute;
-    left: 35%;
+    width: 60% !important;
+    margin: 0 auto !important;
+    display: flex;
+}
+.navbar .collapse ul {
+    flex: 1;
+}
+.navbar .collapse form {
+    text-align: right;
+    flex: 1;
 }
 
 .movie-list,
 .movie-detail {
-    width: 1200px;
-    position: absolute;
-    left: 50%;
-    margin-left: -600px;
+    width: 70%;
+    margin: 0 auto;
 }
 .movie-list .media-heading {
     margin-bottom: 16px;
     font-size: 24px;
 }
 .movie-detail .media-heading {
-    float: right;
-    width: 890px;
     text-align: center;
     margin: 10px 0;
     background-color: rgba(0, 0, 0, .2);
